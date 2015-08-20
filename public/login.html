@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log in</title>
+</head>
+<body>
+	<form name="login" onSubmit="createCookie(this)">
+		<input type="text" placeholder="Your name" name="username" />
+		<input type="submit" value="Log in" />
+	</form>
+	<script type="text/javascript">
+		var createCookie = function(e) {
+			document.cookie = "user="+document.forms['login']['username'].value;
+			window.location = '/index.html';
+		}
+	</script>
+</body>
+</html>
